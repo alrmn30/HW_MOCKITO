@@ -25,6 +25,9 @@ public class PosterManager {
     }
 
     public String[] findLast() {
+        if (sizeOfFindLast > posters.length) {
+            sizeOfFindLast = posters.length;
+        }
         String[] lastPosters = new String[sizeOfFindLast];
         for (int i = 0; i < sizeOfFindLast; i++) {
             lastPosters[i] = posters[posters.length - 1 - i];
